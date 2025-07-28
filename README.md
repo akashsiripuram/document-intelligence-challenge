@@ -258,5 +258,3 @@ For issues and questions:
 ✅ **Generic architecture**: Handles diverse documents and personas  
 
 ---
-
-Built with ❤️ for the Document Intelligence Challenge
