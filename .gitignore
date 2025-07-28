@@ -1,0 +1,24 @@
+# Python virtual environment
+venv/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Generated output files
+output.json
+# If you keep the sample PDFs in your repo but generate output,
+# you don't need to ignore them here, but ensure they are small enough.
+# If you had very large PDFs, you might ignore them and instruct users to download/provide them.
+
+# macOS specific files
+.DS_Store
+
+# IDE specific files (e.g., VS Code)
+.vscode/
+
+# Pip cache files (if any outside venv)
+.pip-cache/

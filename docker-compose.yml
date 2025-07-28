@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  document-intelligence:
+    build: .
+    container_name: doc-intelligence-system
+    volumes:
+      - ./input:/app/input
+      - ./output:/app/output
+      - ./documents:/app/documents
+    working_dir: /app
+    command: ["python", "main.py", "/app/input/input.json", "/app/output/output.json"]
+    environment:
+      - PYTHONUNBUFFERED=1
+    mem_limit: 2g
+    cpus: '2.0'
+    
+  # Development service with shell access
+  dev:
+    build: .
+    container_name: doc-intelligence-dev
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: ["bash"]
+    stdin_open: true
+    tty: true
+    environment:
+      - PYTHONUNBUFFERED=1
